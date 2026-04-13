@@ -11,15 +11,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Noto Sans TC', sans-serif;
-            background-color: #fdfaf7; /* 溫暖米白 */
-            color: #4a3728; /* 深木色文字 */
+            background-color: #fdfaf7;
+            color: #4a3728;
             height: 100%;
         }
         .serif { font-family: 'Noto Serif TC', serif; }
         .bg-warm-wood { background-color: #eaddcf; }
         .accent-green { color: #6b8e23; }
         
-        /* 簡報單頁吸附效果設定 */
         .presentation-container {
             height: 100vh;
             overflow-y: scroll;
@@ -32,34 +31,20 @@
             scroll-snap-align: start;
             display: flex;
             align-items: center;
-            justify-center;
+            justify-content: center;
             padding: 2rem;
             position: relative;
         }
         
-        /* 卡片與圖片佔位符樣式 */
         .card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(8px);
             border-radius: 2rem;
             box-shadow: 0 10px 30px rgba(74, 55, 40, 0.05);
             width: 100%;
-            max-w: 56rem; /* max-w-4xl */
+            max-w: 56rem;
             margin: 0 auto;
             padding: 3rem;
-        }
-        .photo-placeholder {
-            width: 100%;
-            height: 40vh;
-            background-color: #f3ebe1;
-            border: 2px dashed #d4a373;
-            border-radius: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #8c7259;
-            margin-bottom: 1.5rem;
         }
         .page-indicator {
             position: absolute;
@@ -69,11 +54,19 @@
             color: #a89f91;
             font-weight: 500;
         }
+        
+        /* 隱藏捲動條讓畫面更乾淨 */
+        .presentation-container::-webkit-scrollbar {
+            display: none;
+        }
+        .presentation-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body>
 
-    <!-- 全螢幕捲動容器 -->
     <div class="presentation-container">
 
         <!-- 第 1 頁：封面 -->
@@ -92,7 +85,24 @@
             <div class="page-indicator">請向下捲動 ↓</div>
         </section>
 
-        <!-- 第 2 頁：生平背景 -->
+        <!-- 第 2 頁：PTT 起源 -->
+        <section class="slide-page bg-[#f0eae1]">
+            <div class="card border-l-8 border-stone-700">
+                <h2 class="serif text-3xl font-bold mb-4 flex items-center"><span class="text-4xl mr-4">💻</span> 起源：PTT 上的初次亮相</h2>
+                <p class="text-lg text-stone-700 mb-6 leading-relaxed">
+                    這是一切的開端。當初回台南時，在 PTT 上的自我介紹。真誠的文字與專業的背景，在短短 10 天內獲得了熱烈迴響，也開啟了舒蜜達的療癒旅程。
+                </p>
+                <div class="bg-[#0c0c0c] p-6 rounded-xl shadow-inner grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                    <img src="spa/1.jpg" alt="PTT 自介截圖 1" class="w-full h-auto border border-stone-800 rounded-sm hover:scale-[1.02] transition-transform">
+                    <img src="spa/2.jpg" alt="PTT 自介截圖 2" class="w-full h-auto border border-stone-800 rounded-sm hover:scale-[1.02] transition-transform">
+                    <img src="spa/3.jpg" alt="PTT 自介截圖 3" class="w-full h-auto border border-stone-800 rounded-sm hover:scale-[1.02] transition-transform">
+                    <img src="spa/4.jpg" alt="PTT 自介截圖 4" class="w-full h-auto border border-stone-800 rounded-sm hover:scale-[1.02] transition-transform">
+                </div>
+            </div>
+            <div class="page-indicator">Page 2</div>
+        </section>
+
+        <!-- 第 3 頁：生平背景 -->
         <section class="slide-page">
             <div class="card border-l-8 border-amber-400">
                 <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🌱</span> 1. 生平背景</h2>
@@ -101,10 +111,10 @@
                     <p><strong class="text-amber-800">歸鄉的契機：</strong>在大公司體會到忽視員工權益的辛酸。110 年家人生病決定回鄉，遇上 COVID-19 疫情。這份「被迫停下」的契機，反而成了深耕台南的養分，因禍得福。</p>
                 </div>
             </div>
-            <div class="page-indicator">Page 2</div>
+            <div class="page-indicator">Page 3</div>
         </section>
 
-        <!-- 第 3 頁：組織簡介 -->
+        <!-- 第 4 頁：組織簡介 -->
         <section class="slide-page">
             <div class="card border-l-8 border-green-500">
                 <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🏡</span> 2. 組織簡介</h2>
@@ -139,10 +149,10 @@
                     </div>
                 </div>
             </div>
-            <div class="page-indicator">Page 3</div>
+            <div class="page-indicator">Page 4</div>
         </section>
 
-        <!-- 第 4 頁：重要事蹟與價值觀 -->
+        <!-- 第 5 頁：重要事蹟與價值觀 -->
         <section class="slide-page">
             <div class="card border-l-8 border-blue-400">
                 <div class="grid md:grid-cols-2 gap-10">
@@ -169,10 +179,10 @@
                     </p>
                 </div>
             </div>
-            <div class="page-indicator">Page 4</div>
+            <div class="page-indicator">Page 5</div>
         </section>
 
-        <!-- 第 5 頁：學習與經營省思 -->
+        <!-- 第 6 頁：學習與經營省思 -->
         <section class="slide-page">
             <div class="card border-l-8 border-orange-400">
                 <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🔮</span> 5. 值得學習與經營省思</h2>
@@ -196,10 +206,10 @@
                     </div>
                 </div>
             </div>
-            <div class="page-indicator">Page 5</div>
+            <div class="page-indicator">Page 6</div>
         </section>
 
-        <!-- 第 6 頁：理論應用與結語 -->
+        <!-- 第 7 頁：理論應用與結語 -->
         <section class="slide-page">
             <div class="card border-l-8 border-teal-500">
                 <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🥣</span> 6. 理論應用與結語</h2>
@@ -217,86 +227,107 @@
                     「我喜歡服務人，喜歡看著客人滿意離開。<br>按摩不僅是療癒，更是一扇窗口，讓我看見工作室以外廣大的世界。」
                 </div>
             </div>
-            <div class="page-indicator">Page 6</div>
+            <div class="page-indicator">Page 7</div>
         </section>
 
         <!-- ========================================== -->
-        <!-- 照片預留頁面 (共 4 頁) -->
+        <!-- 照片展區 (共 5 頁) -->
         <!-- ========================================== -->
 
-        <!-- 第 7 頁：預留照片 1 -->
+        <!-- 第 8 頁：照片 1 (地圖指引) -->
         <section class="slide-page bg-[#f5efe8]">
             <div class="card text-center">
-                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (1/4) - 工作室環境</h2>
-                <!-- 圖片替換區塊：若要放照片，請將這整個 div 換成 <img src="照片網址" class="w-full h-auto rounded-xl mb-6 shadow-md"> -->
-                <div class="photo-placeholder">
-                    <span class="text-5xl mb-3">📸</span>
-                    <p>預留照片位置</p>
-                    <p class="text-sm opacity-70">（建議放置：長榮店學興書局外觀 或 內部空間）</p>
+                <h2 class="serif text-2xl font-bold mb-6 text-amber-900 flex items-center justify-center"><span class="text-3xl mr-2">🗺️</span> 照片紀錄 (1/5) - 交通與指引</h2>
+                <div class="w-full flex justify-center mb-6">
+                    <!-- 請確保檔名為 map.jpg 並放在 spa 資料夾內 -->
+                    <img src="spa/map.jpg" alt="舒蜜達地圖" class="rounded-xl shadow-lg w-full max-w-2xl border-4 border-white">
                 </div>
-                <div class="bg-white p-4 rounded-lg border border-stone-200">
-                    <p class="font-bold text-stone-700">📝 照片說明：</p>
-                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，例如空間設計理念、裝潢特色等。</p>
+                <div class="bg-white p-5 rounded-lg border border-stone-200 text-left">
+                    <p class="font-bold text-stone-700 text-lg mb-2">📝 舒蜜達專屬地圖</p>
+                    <p class="text-stone-600 leading-relaxed">
+                        精緻可愛的手繪風格地圖，詳細標示了長榮店的確切位置（長榮路四段119巷29號）。從地圖上也能清楚看見與「學興書局」比鄰而居，呈現出緊密連結的家庭情感與在地歸屬感。
+                    </p>
                 </div>
             </div>
-            <div class="page-indicator">Page 7 (Photo)</div>
+            <div class="page-indicator">Page 8</div>
         </section>
 
-        <!-- 第 8 頁：預留照片 2 -->
+        <!-- 第 9 頁：照片 2 (店面與白板) -->
         <section class="slide-page bg-[#f5efe8]">
             <div class="card text-center">
-                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (2/4) - 服務實況 / 設備</h2>
-                <!-- 圖片替換區塊 -->
-                <div class="photo-placeholder">
-                    <span class="text-5xl mb-3">💆‍♂️</span>
-                    <p>預留照片位置</p>
-                    <p class="text-sm opacity-70">（建議放置：按摩床佈置、精油瓶罐、或熱敷藥草包）</p>
+                <h2 class="serif text-2xl font-bold mb-6 text-amber-900 flex items-center justify-center"><span class="text-3xl mr-2">🏠</span> 照片紀錄 (2/5) - 雙重療癒的店面</h2>
+                <div class="w-full flex justify-center mb-6">
+                    <!-- 請確保檔名為 store.jpg 並放在 spa 資料夾內 -->
+                    <img src="spa/store.jpg" alt="學興書局與舒蜜達招牌" class="rounded-xl shadow-lg w-full max-w-2xl object-cover border-4 border-white">
                 </div>
-                <div class="bg-white p-4 rounded-lg border border-stone-200">
-                    <p class="font-bold text-stone-700">📝 照片說明：</p>
-                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，例如舒蜜達獨家使用的精油或特色器具。</p>
+                <div class="bg-white p-5 rounded-lg border border-stone-200 text-left">
+                    <p class="font-bold text-stone-700 text-lg mb-2">📝 書香與芳香的交會點</p>
+                    <p class="text-stone-600 leading-relaxed">
+                        長榮店外觀的特色白板手繪。一邊是舒蜜達的 Spa 服務項目與優雅花草，另一邊則是學興書局的樂器與書本塗鴉。中間的「金蛇迎春」更增添了溫馨的生活感，這裡是媽媽的夢想，也是女兒的事業起點。
+                    </p>
                 </div>
             </div>
-            <div class="page-indicator">Page 8 (Photo)</div>
+            <div class="page-indicator">Page 9</div>
         </section>
 
-        <!-- 第 9 頁：預留照片 3 -->
+        <!-- 第 10 頁：照片 3 (精油塔羅) -->
         <section class="slide-page bg-[#f5efe8]">
             <div class="card text-center">
-                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (3/4) - 特色療程</h2>
-                <!-- 圖片替換區塊 -->
-                <div class="photo-placeholder">
-                    <span class="text-5xl mb-3">🥣</span>
-                    <p>預留照片位置</p>
-                    <p class="text-sm opacity-70">（建議放置：頌缽體驗照片 或 精油塔羅牌陳設）</p>
+                <h2 class="serif text-2xl font-bold mb-6 text-amber-900 flex items-center justify-center"><span class="text-3xl mr-2">🃏</span> 照片紀錄 (3/5) - 特色療程展示</h2>
+                <div class="w-full flex justify-center mb-6">
+                    <!-- 請確保檔名為 tarot.jpg 並放在 spa 資料夾內 -->
+                    <img src="spa/tarot.jpg" alt="精油塔羅牌" class="rounded-xl shadow-lg w-full max-w-xl border-4 border-white">
                 </div>
-                <div class="bg-white p-4 rounded-lg border border-stone-200">
-                    <p class="font-bold text-stone-700">📝 照片說明：</p>
-                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，描述頌缽或塔羅牌如何協助客人放鬆。</p>
+                <div class="bg-white p-5 rounded-lg border border-stone-200 text-left">
+                    <p class="font-bold text-stone-700 text-lg mb-2">📝 精油塔羅牌卡</p>
+                    <p class="text-stone-600 leading-relaxed">
+                        結合身心靈探索的「精油塔羅」牌卡（圖中為檸檬香茅、芹菜籽、茶樹）。透過抽牌的過程，幫助芳療師更了解客人當下的潛意識需求與心理狀態，提供超越一般物理按摩的專屬情緒療癒。
+                    </p>
                 </div>
             </div>
-            <div class="page-indicator">Page 9 (Photo)</div>
+            <div class="page-indicator">Page 10</div>
         </section>
 
-        <!-- 第 10 頁：預留照片 4 -->
+        <!-- 第 11 頁：照片 4 (團隊壯大) -->
         <section class="slide-page bg-[#f5efe8]">
             <div class="card text-center">
-                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (4/4) - 訪談合影 / 甜點</h2>
-                <!-- 圖片替換區塊 -->
-                <div class="photo-placeholder">
-                    <span class="text-5xl mb-3">🍰</span>
-                    <p>預留照片位置</p>
-                    <p class="text-sm opacity-70">（建議放置：訪談時的合照，或是老闆準備的台南在地小甜點）</p>
+                <h2 class="serif text-2xl font-bold mb-6 text-amber-900 flex items-center justify-center"><span class="text-3xl mr-2">👭</span> 照片紀錄 (4/5) - 壯大的芳療團隊</h2>
+                <div class="flex justify-center gap-6 mb-6 h-[40vh]">
+                    <!-- 請確保檔名為 team1.jpg 與 team2.jpg 並放在 spa 資料夾內 -->
+                    <img src="spa/team1.jpg" alt="預約名單1" class="rounded-xl shadow-lg h-full border-4 border-white object-contain">
+                    <img src="spa/team2.jpg" alt="預約名單2" class="rounded-xl shadow-lg h-full border-4 border-white object-contain">
                 </div>
-                <div class="bg-white p-4 rounded-lg border border-stone-200">
-                    <p class="font-bold text-stone-700">📝 照片說明：</p>
-                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，例如與受訪者的合影留念，或特色點心介紹。</p>
+                <div class="bg-white p-5 rounded-lg border border-stone-200 text-left">
+                    <p class="font-bold text-stone-700 text-lg mb-2">📝 陣容堅強的預約系統</p>
+                    <p class="text-stone-600 leading-relaxed">
+                        從剛回台南時的一人工作室，至今預約系統上已擁有 Mia、小婷、C.C、沛瀅等多位專業芳療師。這份名單不僅是規模擴張的證明，更驗證了舒蜜達「給予員工彈性自由」的管理哲學，成功留住了優秀人才。
+                    </p>
                 </div>
             </div>
-            <div class="page-indicator">Page 10 (Photo)</div>
+            <div class="page-indicator">Page 11</div>
         </section>
 
-        <!-- 第 11 頁：名單與資料來源 (最後一頁) -->
+        <!-- 第 12 頁：照片 5 (環境介紹) -->
+        <section class="slide-page bg-[#f5efe8]">
+            <div class="card text-center">
+                <h2 class="serif text-2xl font-bold mb-6 text-amber-900 flex items-center justify-center"><span class="text-3xl mr-2">🌿</span> 照片紀錄 (5/5) - 靜謐的療癒環境</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <!-- 請確保檔名為 5.jpg, 6.jpg, 7.jpg 並放在 spa 資料夾內 -->
+                    <img src="spa/5.jpg" alt="環境介紹1" class="rounded-xl shadow-lg w-full h-48 md:h-56 object-cover border-4 border-white hover:scale-105 transition-transform duration-300">
+                    <img src="spa/6.jpg" alt="環境介紹2" class="rounded-xl shadow-lg w-full h-48 md:h-56 object-cover border-4 border-white hover:scale-105 transition-transform duration-300">
+                    <img src="spa/7.jpg" alt="環境介紹3" class="rounded-xl shadow-lg w-full h-48 md:h-56 object-cover border-4 border-white hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-stone-200 text-left">
+                    <p class="font-bold text-stone-700 text-lg mb-2">📝 專屬的放鬆空間</p>
+                    <p class="text-stone-600 leading-relaxed">
+                        溫馨、乾淨且充滿香氣的按摩空間。舒蜜達注重每一個環境細節，從柔和的燈光到舒適的按摩床，致力於為每一位來到這裡的客人，打造一個能完全卸下心防、沉澱心靈的靜謐避風港。
+                    </p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 12</div>
+        </section>
+
+        <!-- 第 13 頁：名單與資料來源 (最後一頁) -->
         <section class="slide-page bg-[#4a3728]">
             <div class="card border-none bg-white/95 text-center px-10 py-16">
                 <div class="text-5xl mb-6">✨</div>
@@ -327,7 +358,7 @@
 
                 <p class="mt-12 text-sm text-stone-400">Copyright © 2024</p>
             </div>
-            <div class="page-indicator text-white/50">Page 11 (End)</div>
+            <div class="page-indicator text-white/50">Page 13 (End)</div>
         </section>
 
     </div>
@@ -336,16 +367,14 @@
         // 監聽鍵盤方向鍵事件來控制簡報上下翻頁
         document.addEventListener('keydown', function(event) {
             const container = document.querySelector('.presentation-container');
-            const slideHeight = window.innerHeight; // 取得單一頁面的高度
+            const slideHeight = window.innerHeight;
 
-            // 按下「下」或「右」方向鍵：前往下一頁
             if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
-                event.preventDefault(); // 防止預設捲動行為重疊
+                event.preventDefault();
                 container.scrollBy({ top: slideHeight, left: 0, behavior: 'smooth' });
             } 
-            // 按下「上」或「左」方向鍵：回到上一頁
             else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-                event.preventDefault(); // 防止預設捲動行為重疊
+                event.preventDefault();
                 container.scrollBy({ top: -slideHeight, left: 0, behavior: 'smooth' });
             }
         });
