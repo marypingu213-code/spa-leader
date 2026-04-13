@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舒蜜達 Sumida - 訪談紀錄與簡報</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fdfaf7; /* 溫暖米白 */
+            color: #4a3728; /* 深木色文字 */
+            height: 100%;
+        }
+        .serif { font-family: 'Noto Serif TC', serif; }
+        .bg-warm-wood { background-color: #eaddcf; }
+        .accent-green { color: #6b8e23; }
+        
+        /* 簡報單頁吸附效果設定 */
+        .presentation-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        .slide-page {
+            min-height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        /* 卡片與圖片佔位符樣式 */
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(74, 55, 40, 0.05);
+            width: 100%;
+            max-w: 56rem; /* max-w-4xl */
+            margin: 0 auto;
+            padding: 3rem;
+        }
+        .photo-placeholder {
+            width: 100%;
+            height: 40vh;
+            background-color: #f3ebe1;
+            border: 2px dashed #d4a373;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #8c7259;
+            margin-bottom: 1.5rem;
+        }
+        .page-indicator {
+            position: absolute;
+            bottom: 2rem;
+            right: 3rem;
+            font-size: 0.875rem;
+            color: #a89f91;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 全螢幕捲動容器 -->
+    <div class="presentation-container">
+
+        <!-- 第 1 頁：封面 -->
+        <section class="slide-page bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
+            <div class="card text-center border-t-8 border-amber-600">
+                <div class="text-6xl mb-6">💆‍♀️🌿🕯️</div>
+                <h1 class="serif text-5xl md:text-6xl font-bold mb-6 accent-green">舒蜜達 <span class="text-amber-700">Sumida</span></h1>
+                <h2 class="serif text-2xl md:text-3xl text-stone-600 mb-8">芳香美學個人工作室 訪談紀錄</h2>
+                <p class="text-lg tracking-widest text-stone-500 italic mb-8">從心出發，讓壓力與疲憊隨香氣消散</p>
+                <div class="flex justify-center gap-4">
+                    <span class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-bold">#舒壓按摩</span>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold">#精油塔羅</span>
+                    <span class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-bold">#溫暖歸鄉</span>
+                </div>
+            </div>
+            <div class="page-indicator">請向下捲動 ↓</div>
+        </section>
+
+        <!-- 第 2 頁：生平背景 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-amber-400">
+                <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🌱</span> 1. 生平背景</h2>
+                <div class="space-y-6 text-lg leading-relaxed">
+                    <p><strong class="text-amber-800">轉折的起點：</strong>原本就讀傳播科系，畢業後進入壽險業，但因感受到保險業過強的目的性與業績壓力，意識到自己嚮往純粹的服務。因緣際會下追隨學姊腳步進入美容產業，深耕了八年。</p>
+                    <p><strong class="text-amber-800">歸鄉的契機：</strong>在大公司體會到忽視員工權益的辛酸。110 年家人生病決定回鄉，遇上 COVID-19 疫情。這份「被迫停下」的契機，反而成了深耕台南的養分，因禍得福。</p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 2</div>
+        </section>
+
+        <!-- 第 3 頁：組織簡介 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-green-500">
+                <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🏡</span> 2. 組織簡介</h2>
+                <p class="mb-4 text-lg"><strong>店名寓意：</strong> 原名「快樂頌」，後經大師命名為「舒蜜達」，更具質感與放鬆氛圍。</p>
+                
+                <div class="mb-6">
+                    <strong class="text-lg text-green-800">多元服務項目：</strong>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">筋絡按摩</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">精油按摩</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">泰式按摩</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">孕婦按摩</span>
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">美胸按摩</span>
+                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">乳癌保健按摩</span>
+                        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">臉部刮痧 / 挽臉 / 清粉刺</span>
+                        <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">抗衰療程 / 角蛋白</span>
+                        <span class="bg-stone-100 text-stone-800 px-3 py-1 rounded-full text-sm">拔罐 / 滑罐 / 體刷</span>
+                        <span class="bg-stone-100 text-stone-800 px-3 py-1 rounded-full text-sm">熱蠟除毛 / 筋膜刀放鬆</span>
+                        <span class="bg-stone-100 text-stone-800 px-3 py-1 rounded-full text-sm">艾草溫罐 / 熱石 / 全身去角質</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">頌缽療癒</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-4">
+                    <div class="bg-amber-50 p-6 rounded-2xl">
+                        <h3 class="font-bold text-amber-800 mb-2 text-xl">📍 長榮店（學興書局）</h3>
+                        <p>結合媽媽的書店，由爸爸為愛增建後方空間，充滿家人支持的溫暖。</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-2xl border border-green-200">
+                        <h3 class="font-bold text-green-800 mb-2 text-xl">📍 公園店（全新據點）</h3>
+                        <p>新租透天厝，一樓延續媽媽的書店夢，樓上則是舒蜜達的療癒空間，團隊已達 10 人。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-indicator">Page 3</div>
+        </section>
+
+        <!-- 第 4 頁：重要事蹟與價值觀 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-blue-400">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h2 class="serif text-2xl font-bold mb-4 flex items-center"><span class="text-3xl mr-3">🏆</span> 3. 重要事蹟</h2>
+                        <ul class="space-y-4 list-disc pl-5 text-lg">
+                            <li><strong class="text-blue-800">PTT 驚艷開場：</strong> 回台南初期僅宣傳 10 天，預約瞬間爆滿。</li>
+                            <li><strong class="text-blue-800">穩健擴張：</strong> 從單人工作室發展為 10 人團隊，並開拓第二據點。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="serif text-2xl font-bold mb-4 flex items-center"><span class="text-3xl mr-3">🤝</span> 4. 重要價值觀</h2>
+                        <ul class="space-y-4 text-lg">
+                            <li class="bg-blue-50 p-4 rounded-xl"><strong>對待客人：</strong>讓客人每次都能徹底放鬆、開心地離開。</li>
+                            <li class="bg-purple-50 p-4 rounded-xl"><strong>對待員工：</strong>給予極大彈性。反思過去大公司經驗，致力提供自由公平的職場環境。</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white p-6 rounded-xl border-l-4 border-amber-500 shadow-sm relative">
+                    <span class="absolute -top-4 -left-2 text-4xl opacity-50">❝</span>
+                    <p class="text-lg text-stone-700 italic leading-relaxed pl-4">
+                        「有時覺得我們的工作不只是按摩而已，還兼任了傾聽者的角色，這也是我做這行的樂趣所在，不同的人生經歷就會有不同的 body 呈現，我一邊對答案一邊享受你的人生故事。」
+                    </p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 4</div>
+        </section>
+
+        <!-- 第 5 頁：學習與經營省思 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-orange-400">
+                <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🔮</span> 5. 值得學習與經營省思</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-bold text-orange-800 text-xl mb-2">✨ 追求獨特性與跨界思維</h3>
+                        <p class="text-lg">除了專業按摩，更融入<strong>精油塔羅</strong>與<strong>頌缽</strong>，持續進修，不僅服務客人也保護芳療師體力。</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-pink-700 text-xl mb-2">🎀 專業進修與溫暖同理</h3>
+                        <p class="text-lg">針對乳癌術後女性推出<strong>「愛波呵護」</strong>，學習專屬淋巴引流，以細膩手法溫柔陪伴顧客調適術後身體變化。</p>
+                    </div>
+                </div>
+
+                <div class="bg-orange-50 p-6 rounded-2xl">
+                    <h3 class="font-bold text-orange-800 text-xl mb-4 flex items-center">☕ 經營上的智慧轉向</h3>
+                    <div class="space-y-3 text-lg">
+                        <p><strong>遇到難題：</strong> 原想在休息區自製甜點招待，卻發現準備時間不足，形成管理壓力。</p>
+                        <p><strong>靈活解決：</strong> 善用「台南甜點之都」優勢，改採購在地知名小點每月更換，解決人力問題，更帶給客人驚喜！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-indicator">Page 5</div>
+        </section>
+
+        <!-- 第 6 頁：理論應用與結語 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-teal-500">
+                <h2 class="serif text-3xl font-bold mb-6 flex items-center"><span class="text-4xl mr-4">🥣</span> 6. 理論應用與結語</h2>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="border-2 border-teal-100 p-5 rounded-xl">
+                        <p class="font-bold accent-green text-xl mb-2">🎵 頌缽音療應用</p>
+                        <p>透過聲音頻率引導放鬆肌肉，讓芳療師更省力，客人感受更深層。</p>
+                    </div>
+                    <div class="border-2 border-teal-100 p-5 rounded-xl">
+                        <p class="font-bold accent-green text-xl mb-2">🌿 藥草熱敷應用</p>
+                        <p>結合溫熱效應，透過特製藥草包促進循環，延長舒緩感。</p>
+                    </div>
+                </div>
+                <div class="bg-teal-50 p-6 rounded-2xl italic text-lg text-center leading-loose">
+                    「我喜歡服務人，喜歡看著客人滿意離開。<br>按摩不僅是療癒，更是一扇窗口，讓我看見工作室以外廣大的世界。」
+                </div>
+            </div>
+            <div class="page-indicator">Page 6</div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 照片預留頁面 (共 4 頁) -->
+        <!-- ========================================== -->
+
+        <!-- 第 7 頁：預留照片 1 -->
+        <section class="slide-page bg-[#f5efe8]">
+            <div class="card text-center">
+                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (1/4) - 工作室環境</h2>
+                <!-- 圖片替換區塊：若要放照片，請將這整個 div 換成 <img src="照片網址" class="w-full h-auto rounded-xl mb-6 shadow-md"> -->
+                <div class="photo-placeholder">
+                    <span class="text-5xl mb-3">📸</span>
+                    <p>預留照片位置</p>
+                    <p class="text-sm opacity-70">（建議放置：長榮店學興書局外觀 或 內部空間）</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-stone-200">
+                    <p class="font-bold text-stone-700">📝 照片說明：</p>
+                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，例如空間設計理念、裝潢特色等。</p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 7 (Photo)</div>
+        </section>
+
+        <!-- 第 8 頁：預留照片 2 -->
+        <section class="slide-page bg-[#f5efe8]">
+            <div class="card text-center">
+                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (2/4) - 服務實況 / 設備</h2>
+                <!-- 圖片替換區塊 -->
+                <div class="photo-placeholder">
+                    <span class="text-5xl mb-3">💆‍♂️</span>
+                    <p>預留照片位置</p>
+                    <p class="text-sm opacity-70">（建議放置：按摩床佈置、精油瓶罐、或熱敷藥草包）</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-stone-200">
+                    <p class="font-bold text-stone-700">📝 照片說明：</p>
+                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，例如舒蜜達獨家使用的精油或特色器具。</p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 8 (Photo)</div>
+        </section>
+
+        <!-- 第 9 頁：預留照片 3 -->
+        <section class="slide-page bg-[#f5efe8]">
+            <div class="card text-center">
+                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (3/4) - 特色療程</h2>
+                <!-- 圖片替換區塊 -->
+                <div class="photo-placeholder">
+                    <span class="text-5xl mb-3">🥣</span>
+                    <p>預留照片位置</p>
+                    <p class="text-sm opacity-70">（建議放置：頌缽體驗照片 或 精油塔羅牌陳設）</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-stone-200">
+                    <p class="font-bold text-stone-700">📝 照片說明：</p>
+                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，描述頌缽或塔羅牌如何協助客人放鬆。</p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 9 (Photo)</div>
+        </section>
+
+        <!-- 第 10 頁：預留照片 4 -->
+        <section class="slide-page bg-[#f5efe8]">
+            <div class="card text-center">
+                <h2 class="serif text-2xl font-bold mb-4 text-amber-900">照片紀錄 (4/4) - 訪談合影 / 甜點</h2>
+                <!-- 圖片替換區塊 -->
+                <div class="photo-placeholder">
+                    <span class="text-5xl mb-3">🍰</span>
+                    <p>預留照片位置</p>
+                    <p class="text-sm opacity-70">（建議放置：訪談時的合照，或是老闆準備的台南在地小甜點）</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-stone-200">
+                    <p class="font-bold text-stone-700">📝 照片說明：</p>
+                    <p class="text-stone-500 mt-2">請在此輸入關於上方照片的說明文字，例如與受訪者的合影留念，或特色點心介紹。</p>
+                </div>
+            </div>
+            <div class="page-indicator">Page 10 (Photo)</div>
+        </section>
+
+        <!-- 第 11 頁：名單與資料來源 (最後一頁) -->
+        <section class="slide-page bg-[#4a3728]">
+            <div class="card border-none bg-white/95 text-center px-10 py-16">
+                <div class="text-5xl mb-6">✨</div>
+                <h2 class="serif text-4xl font-bold mb-10 text-amber-900 border-b-2 border-amber-200 inline-block pb-4">Thank You</h2>
+                
+                <div class="space-y-6 text-xl text-stone-700 text-left max-w-md mx-auto bg-[#fdfaf7] p-8 rounded-2xl shadow-inner">
+                    <div class="flex border-b border-stone-200 pb-3">
+                        <span class="font-bold w-32 text-amber-800">訪談對象：</span>
+                        <span>Somida 舒蜜達芳香美學</span>
+                    </div>
+                    <div class="flex border-b border-stone-200 pb-3">
+                        <span class="font-bold w-32 text-amber-800">資料來源：</span>
+                        <span>網路搜尋、實地訪談</span>
+                    </div>
+                    <div class="flex border-b border-stone-200 pb-3">
+                        <span class="font-bold w-32 text-amber-800">組長：</span>
+                        <span>林宛儀 <span class="text-base text-stone-500 ml-2">(訪談)</span></span>
+                    </div>
+                    <div class="flex border-b border-stone-200 pb-3">
+                        <span class="font-bold w-32 text-amber-800">組員：</span>
+                        <span>蔡岱倫 <span class="text-base text-stone-500 ml-2">(版面編排)</span></span>
+                    </div>
+                    <div class="flex">
+                        <span class="font-bold w-32 text-amber-800">組員：</span>
+                        <span>黃端玲 <span class="text-base text-stone-500 ml-2">(紀錄)</span></span>
+                    </div>
+                </div>
+
+                <p class="mt-12 text-sm text-stone-400">Copyright © 2024</p>
+            </div>
+            <div class="page-indicator text-white/50">Page 11 (End)</div>
+        </section>
+
+    </div>
+
+    <script>
+        // 監聽鍵盤方向鍵事件來控制簡報上下翻頁
+        document.addEventListener('keydown', function(event) {
+            const container = document.querySelector('.presentation-container');
+            const slideHeight = window.innerHeight; // 取得單一頁面的高度
+
+            // 按下「下」或「右」方向鍵：前往下一頁
+            if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                event.preventDefault(); // 防止預設捲動行為重疊
+                container.scrollBy({ top: slideHeight, left: 0, behavior: 'smooth' });
+            } 
+            // 按下「上」或「左」方向鍵：回到上一頁
+            else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                event.preventDefault(); // 防止預設捲動行為重疊
+                container.scrollBy({ top: -slideHeight, left: 0, behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+</html>
