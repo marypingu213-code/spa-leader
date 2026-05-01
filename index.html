@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>舒蜜達 Somida - 訪談紀錄與簡報</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* 鎖定全螢幕，隱藏捲動條 */
         body, html {
@@ -14,11 +14,11 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'LXGW WenKai TC', sans-serif;
             background-color: #fdfaf7;
             color: #4a3728;
         }
-        .serif { font-family: 'Noto Serif TC', serif; }
+        .serif { font-family: 'LXGW WenKai TC', serif; }
         .accent-green { color: #6b8e23; }
         
         /* 水平滑動容器 */
@@ -26,7 +26,7 @@
             display: flex;
             width: 100vw;
             height: 100vh;
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* 平滑過渡效果 */
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         }
         
         /* 單一投影片版面 */
@@ -52,9 +52,9 @@
             padding: 4rem 5rem;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
 
-        /* 內容區塊自動填滿剩餘空間並置中 */
         .card-content {
             flex: 1;
             display: flex;
@@ -62,10 +62,9 @@
             justify-content: center;
         }
 
-        /* 圖片容器 */
         .img-container {
             flex: 1;
-            min-height: 0; /* 重要：讓 flex 子元素可以縮小 */
+            min-height: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -101,7 +100,7 @@
 <body>
 
     <!-- 頁數指示器 -->
-    <div id="page-indicator">1 / 14</div>
+    <div id="page-indicator"></div>
 
     <div class="slider-container" id="slider">
 
@@ -111,8 +110,13 @@
                 <div class="text-8xl mb-8">💆‍♀️🌿🕯️</div>
                 <h1 class="serif text-7xl md:text-8xl font-bold mb-8 accent-green tracking-wide">舒蜜達 <span class="text-amber-700">Somida</span></h1>
                 <h2 class="serif text-4xl md:text-5xl text-stone-600 mb-12">芳香美學個人工作室 訪談紀錄</h2>
-                <p class="text-3xl tracking-widest text-stone-500 italic mb-12">從心出發，讓壓力與疲憊隨香氣消散</p>
-                <div class="flex justify-center gap-6 mt-8">
+                <p class="text-3xl tracking-widest text-stone-500 italic mb-8">從心出發，讓壓力與疲憊隨香氣消散</p>
+                <div class="text-3xl text-stone-600 font-bold flex justify-center gap-12 mb-10 bg-white/60 py-4 px-12 rounded-full shadow-sm">
+                    <span>林宛儀</span>
+                    <span>蔡岱倫</span>
+                    <span>黃端玲</span>
+                </div>
+                <div class="flex justify-center gap-6 mt-4">
                     <span class="bg-amber-100 text-amber-800 px-6 py-3 rounded-full text-2xl font-bold">#舒壓按摩</span>
                     <span class="bg-green-100 text-green-800 px-6 py-3 rounded-full text-2xl font-bold">#精油塔羅</span>
                     <span class="bg-amber-100 text-amber-800 px-6 py-3 rounded-full text-2xl font-bold">#溫暖歸鄉</span>
@@ -167,7 +171,7 @@
             </div>
         </section>
 
-        <!-- 第 4 頁：組織簡介 -->
+        <!-- 第 5 頁：組織簡介 -->
         <section class="slide-page">
             <div class="card border-l-8 border-green-500">
                 <h2 class="serif text-5xl font-bold mb-8 flex items-center"><span class="text-6xl mr-6">🏡</span> 2. 組織簡介</h2>
@@ -184,10 +188,9 @@
                             <span class="bg-pink-100 text-pink-800 px-5 py-2 rounded-full text-2xl">美胸按摩</span>
                             <span class="bg-pink-100 text-pink-800 px-5 py-2 rounded-full text-2xl">乳癌保健按摩</span>
                             <span class="bg-amber-100 text-amber-800 px-5 py-2 rounded-full text-2xl">臉部刮痧 / 挽臉 / 清粉刺</span>
-                            <span class="bg-amber-100 text-amber-800 px-5 py-2 rounded-full text-2xl">抗衰療程 / 角蛋白</span>
                             <span class="bg-stone-100 text-stone-800 px-5 py-2 rounded-full text-2xl">拔罐 / 滑罐 / 體刷</span>
-                            <span class="bg-stone-100 text-stone-800 px-5 py-2 rounded-full text-2xl">熱蠟除毛 / 筋膜刀放鬆</span>
-                            <span class="bg-stone-100 text-stone-800 px-5 py-2 rounded-full text-2xl">艾草溫罐 / 熱石 / 全身去角質</span>
+                            <span class="bg-stone-100 text-stone-800 px-5 py-2 rounded-full text-2xl">筋膜刀放鬆</span>
+                            <span class="bg-stone-100 text-stone-800 px-5 py-2 rounded-full text-2xl">熱石 / 全身去角質</span>
                             <span class="bg-blue-100 text-blue-800 px-5 py-2 rounded-full text-2xl">頌缽療癒</span>
                         </div>
                     </div>
@@ -206,10 +209,14 @@
             </div>
         </section>
 
-        <!-- 第 5 頁：重要事蹟與價值觀 -->
+        <!-- 第 6 頁：重要事蹟與價值觀 (報告人：端玲) -->
         <section class="slide-page">
             <div class="card border-l-8 border-blue-400">
-                <div class="card-content grid md:grid-cols-2 gap-16">
+                <div class="absolute top-8 right-10 bg-blue-100 text-blue-800 px-6 py-3 rounded-full text-2xl font-bold shadow-sm">
+                    🗣️ 報告人：黃端玲
+                </div>
+
+                <div class="card-content grid md:grid-cols-2 gap-16 mt-8">
                     <div class="flex flex-col gap-8">
                         <h2 class="serif text-5xl font-bold flex items-center"><span class="text-6xl mr-4">🏆</span> 3. 重要事蹟</h2>
                         <ul class="space-y-8 list-disc pl-8 text-3xl leading-relaxed bg-blue-50 p-8 rounded-3xl">
@@ -219,14 +226,15 @@
                     </div>
                     <div class="flex flex-col gap-8">
                         <h2 class="serif text-5xl font-bold flex items-center"><span class="text-6xl mr-4">🤝</span> 4. 重要價值觀</h2>
-                        <ul class="space-y-6 text-2xl leading-relaxed">
-                            <li class="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm"><strong>對待客人：</strong>讓客人每次都能徹底放鬆、開心地離開。</li>
-                            <li class="bg-purple-50 p-6 rounded-3xl border border-purple-100 shadow-sm"><strong>對待員工：</strong>給予極大彈性。反思過去大公司經驗，致力提供自由公平的職場環境。</li>
+                        <ul class="space-y-4 text-2xl leading-relaxed">
+                            <li class="bg-white p-5 rounded-3xl border border-blue-100 shadow-sm"><strong>(1) 對待客人：</strong>讓客人每次都能徹底放鬆、開心地離開。</li>
+                            <li class="bg-purple-50 p-5 rounded-3xl border border-purple-100 shadow-sm"><strong>(2) 對待員工：</strong>以人為本，給予極大彈性。反思過去經驗，致力提供自由公平的職場。</li>
+                            <li class="bg-green-50 p-5 rounded-3xl border border-green-100 shadow-sm"><strong>(3) 同理心：</strong>服務過程中不使用手機、不推銷，讓客人在注重隱私的空間中獲得最純粹的平靜。</li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="mt-12 bg-white p-10 rounded-3xl border-l-8 border-amber-500 shadow-md relative">
+                <div class="mt-8 bg-white p-8 rounded-3xl border-l-8 border-amber-500 shadow-md relative">
                     <span class="absolute -top-6 -left-4 text-7xl opacity-40 text-amber-600">❝</span>
                     <p class="text-3xl text-stone-700 italic leading-loose pl-8 font-medium">
                         「有時覺得我們的工作不只是按摩而已，還兼任了傾聽者的角色，這也是我做這行的樂趣所在，不同的人生經歷就會有不同的 body 呈現，我一邊對答案一邊享受你的人生故事。」
@@ -235,7 +243,7 @@
             </div>
         </section>
 
-        <!-- 第 6 頁：學習與經營省思 -->
+        <!-- 第 7 頁：學習與經營省思 -->
         <section class="slide-page">
             <div class="card border-l-8 border-orange-400">
                 <h2 class="serif text-5xl font-bold mb-12 flex items-center"><span class="text-6xl mr-6">🔮</span> 5. 值得學習與經營省思</h2>
@@ -263,7 +271,7 @@
             </div>
         </section>
 
-        <!-- 第 7 頁：理論應用與結語 -->
+        <!-- 第 8 頁：理論應用與結語 -->
         <section class="slide-page">
             <div class="card border-l-8 border-teal-500">
                 <h2 class="serif text-5xl font-bold mb-12 flex items-center"><span class="text-6xl mr-6">🥣</span> 6. 理論應用與結語</h2>
@@ -286,10 +294,10 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- 照片展區 (共 5 頁) - 充滿版面設計 -->
+        <!-- 照片展區 (共 5 頁) -->
         <!-- ========================================== -->
 
-        <!-- 第 8 頁：照片 1 (地圖指引) -->
+        <!-- 第 9 頁：照片 1 (地圖指引) -->
         <section class="slide-page">
             <div class="card text-center">
                 <h2 class="serif text-4xl font-bold mb-4 text-amber-900 flex items-center justify-center"><span class="text-5xl mr-4">🗺️</span> 照片紀錄 (1/5) - 交通與指引</h2>
@@ -305,7 +313,7 @@
             </div>
         </section>
 
-        <!-- 第 9 頁：照片 2 (店面與白板) -->
+        <!-- 第 10 頁：照片 2 (店面與白板) -->
         <section class="slide-page">
             <div class="card text-center">
                 <h2 class="serif text-4xl font-bold mb-4 text-amber-900 flex items-center justify-center"><span class="text-5xl mr-4">🏠</span> 照片紀錄 (2/5) - 雙重療癒的店面</h2>
@@ -321,7 +329,7 @@
             </div>
         </section>
 
-        <!-- 第 10 頁：照片 3 (精油塔羅) -->
+        <!-- 第 11 頁：照片 3 (精油塔羅) -->
         <section class="slide-page">
             <div class="card text-center">
                 <h2 class="serif text-4xl font-bold mb-4 text-amber-900 flex items-center justify-center"><span class="text-5xl mr-4">🃏</span> 照片紀錄 (3/5) - 特色療程展示</h2>
@@ -337,7 +345,7 @@
             </div>
         </section>
 
-        <!-- 第 11 頁：照片 4 (團隊壯大) -->
+        <!-- 第 12 頁：照片 4 (團隊壯大) -->
         <section class="slide-page">
             <div class="card text-center">
                 <h2 class="serif text-4xl font-bold mb-4 text-amber-900 flex items-center justify-center"><span class="text-5xl mr-4">👭</span> 照片紀錄 (4/5) - 壯大的芳療團隊</h2>
@@ -354,12 +362,11 @@
             </div>
         </section>
 
-        <!-- 第 12 頁：照片 5 (環境介紹) -->
+        <!-- 第 13 頁：照片 5 (環境介紹) -->
         <section class="slide-page">
             <div class="card text-center">
                 <h2 class="serif text-4xl font-bold mb-4 text-amber-900 flex items-center justify-center"><span class="text-5xl mr-4">🌿</span> 照片紀錄 (5/5) - 靜謐的療癒環境</h2>
                 <div class="img-container">
-                    <!-- 使用 .jpeg 副檔名 -->
                     <img src="spa/5.jpeg" alt="環境介紹1">
                     <img src="spa/6.jpeg" alt="環境介紹2">
                     <img src="spa/7.jpeg" alt="環境介紹3">
@@ -373,36 +380,161 @@
             </div>
         </section>
 
-        <!-- 第 13 頁：名單與資料來源 (最後一頁) -->
+        <!-- ========================================== -->
+        <!-- 省思專區 (共 3 頁) -->
+        <!-- ========================================== -->
+
+        <!-- 第 14 頁：省思 1 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-stone-700 bg-stone-50">
+                <div class="absolute top-8 right-10 bg-stone-200 text-stone-800 px-6 py-3 rounded-full text-2xl font-bold shadow-sm">
+                    🗣️ 報告人：蔡岱倫
+                </div>
+                <h2 class="serif text-5xl font-bold mb-10 flex items-center text-stone-800 mt-6"><span class="text-6xl mr-6">💡</span> 省思 - 從跨域轉職到展現韌性</h2>
+                <div class="card-content">
+                    <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-200 text-3xl leading-loose text-stone-700">
+                        <p class="mb-8">在這次訪談中，最讓我印象深刻的是創辦人<strong>勇於轉換跑道與面對逆境的韌性</strong>。</p>
+                        <p class="mb-8">她原本具備傳播科系背景，畢業後進入壽險業，卻深刻感受到保險業過度強調業績與目的性的壓力，進而覺察到自己內心渴望的是「純粹的服務」。這種深度的自我覺察，促使她勇敢踏入美容產業並深耕了八年。</p>
+                        <p>更讓人敬佩的是，110 年因家人生病加上 COVID-19 疫情爆發，這看似是職涯被迫停下腳步的危機，她卻將其轉化為深耕台南的契機，真正做到了<strong class="text-amber-700">因禍得福</strong>。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第 15 頁：省思 2 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-stone-700 bg-stone-50">
+                <div class="absolute top-8 right-10 bg-stone-200 text-stone-800 px-6 py-3 rounded-full text-2xl font-bold shadow-sm">
+                    🗣️ 報告人：蔡岱倫
+                </div>
+                <h2 class="serif text-5xl font-bold mb-10 flex items-center text-stone-800 mt-6"><span class="text-6xl mr-6">💡</span> 省思 - 靈活的商業經營思維</h2>
+                <div class="card-content">
+                    <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-200 text-3xl leading-loose text-stone-700">
+                        <p class="mb-8">在商業策略上，她展現了極高的靈活度與跨界思維。舒蜜達初期沒有砸大錢做廣告，僅靠著在 PTT 上發布真誠的自我介紹，短短 10 天內就獲得熱烈迴響並瞬間預約爆滿。</p>
+                        <p>此外，面對經營難題時的<strong>「轉念」</strong>也讓我學到很多。例如，原先她想親自手作甜點招待客人，卻發現準備時間不足，反而成為管理壓力；</p>
+                        <p>她立刻善用「台南甜點之都」的地緣優勢，改為採購在地知名小點並每月更換。這不僅解決了人力負擔，還為客人創造了滿滿的驚喜感。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第 16 頁：省思 3 -->
+        <section class="slide-page">
+            <div class="card border-l-8 border-stone-700 bg-stone-50">
+                <div class="absolute top-8 right-10 bg-stone-200 text-stone-800 px-6 py-3 rounded-full text-2xl font-bold shadow-sm">
+                    🗣️ 報告人：蔡岱倫
+                </div>
+                <h2 class="serif text-5xl font-bold mb-10 flex items-center text-stone-800 mt-6"><span class="text-6xl mr-6">💡</span> 省思 - 打破框架的跨界創新</h2>
+                <div class="card-content">
+                    <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-200 text-3xl leading-loose text-stone-700">
+                        <p class="mb-8">同時，她也打破傳統按摩的框架，將<strong class="text-green-700">「精油塔羅」</strong>與<strong class="text-blue-700">「頌缽音療」</strong>融入服務中。</p>
+                        <p class="mb-8">精油塔羅能透過盲抽牌卡分析客人的身心現況與潛意識需求，而頌缽則透過聲音頻率引導肌肉放鬆，加深了客人的深層療癒感及體驗感。</p>
+                        <p class="text-amber-800 font-bold bg-amber-50 p-6 rounded-2xl">
+                            這些不落俗套的經營智慧，非常值得我們未來踏入職場或創業時借鏡。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- Q&A 分頁互動區 -->
+        <!-- ========================================== -->
+
+        <!-- 第 17 頁：Q1 -->
+        <section class="slide-page">
+            <div class="card border-t-8 border-teal-600 bg-teal-50">
+                <div class="absolute top-8 right-10 bg-teal-200 text-teal-900 px-6 py-3 rounded-full text-2xl font-bold shadow-sm">
+                    🗣️ 報告人：黃端玲
+                </div>
+                <h2 class="serif text-6xl font-bold mb-10 flex items-center justify-center text-teal-900 mt-4"><span class="text-6xl mr-4">❓</span> Q&A 互動時間 (1/2)</h2>
+                
+                <div class="card-content flex items-center justify-center">
+                    <div class="bg-white p-16 rounded-3xl shadow-sm border border-teal-100 flex flex-col w-full max-w-6xl">
+                        <h3 class="text-4xl font-bold text-stone-800 mb-10 leading-relaxed">
+                            <span class="text-teal-600 text-5xl mr-2">Q1.</span> 在「打造零壓力且受尊重的學習空間」中，老師應該如何調整班級經營？
+                        </h3>
+                        <!-- 在 JS 互動中會觸發 reveal-answer 顯示答案 -->
+                        <ul class="text-3xl space-y-6 text-stone-600 flex-1 flex flex-col justify-center">
+                            <li class="p-6 rounded-2xl border border-stone-100">A. 實施嚴格的集體獎懲制度</li>
+                            <li class="p-6 rounded-2xl border border-stone-100 reveal-answer transition-all duration-500">
+                                B. 減少不必要的競爭比較 <span class="ml-2 opacity-0 check-mark transition-opacity duration-500">✅</span>
+                            </li>
+                            <li class="p-6 rounded-2xl border border-stone-100">C. 公開班級排名前後順序</li>
+                            <li class="p-6 rounded-2xl border border-stone-100">D. 增加定期的隨堂測驗以維持警覺</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第 18 頁：Q2 -->
+        <section class="slide-page">
+            <div class="card border-t-8 border-teal-600 bg-teal-50">
+                <div class="absolute top-8 right-10 bg-teal-200 text-teal-900 px-6 py-3 rounded-full text-2xl font-bold shadow-sm">
+                    🗣️ 報告人：黃端玲
+                </div>
+                <h2 class="serif text-6xl font-bold mb-10 flex items-center justify-center text-teal-900 mt-4"><span class="text-6xl mr-4">❓</span> Q&A 互動時間 (2/2)</h2>
+                
+                <div class="card-content flex items-center justify-center">
+                    <div class="bg-white p-16 rounded-3xl shadow-sm border border-teal-100 flex flex-col w-full max-w-6xl">
+                        <h3 class="text-4xl font-bold text-stone-800 mb-10 leading-relaxed">
+                            <span class="text-teal-600 text-5xl mr-2">Q2.</span> 芳療師在服務時「不隨意閒聊」以及「手機開啟靜音」，這在教育現場提醒了老師什麼？
+                        </h3>
+                        <ul class="text-3xl space-y-6 text-stone-600 flex-1 flex flex-col justify-center">
+                            <li class="p-6 rounded-2xl border border-stone-100 reveal-answer transition-all duration-500">
+                                A. 尊重學生的學習節奏與隱私 <span class="ml-2 opacity-0 check-mark transition-opacity duration-500">✅</span>
+                            </li>
+                            <li class="p-6 rounded-2xl border border-stone-100">B. 老師在課間不應使用任何數位器材</li>
+                            <li class="p-6 rounded-2xl border border-stone-100">C. 教學內容應完全標準化，無需互動</li>
+                            <li class="p-6 rounded-2xl border border-stone-100">D. 老師應嚴格禁止學生在教室說話</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第 19 頁：結尾頁 (團隊名單) -->
         <section class="slide-page bg-[#4a3728]">
             <div class="card border-none bg-white/95 text-center flex flex-col justify-center items-center">
                 <div class="text-7xl mb-8">✨</div>
                 <h2 class="serif text-6xl font-bold mb-16 text-amber-900 border-b-4 border-amber-200 inline-block pb-6">Thank You</h2>
                 
                 <div class="space-y-10 text-3xl text-stone-700 text-left w-full max-w-4xl bg-[#fdfaf7] p-12 rounded-3xl shadow-inner">
-                    <div class="flex border-b border-stone-200 pb-4">
+                    <div class="flex border-b border-stone-200 pb-4 justify-center">
+                        <span class="font-bold w-48 text-amber-800">組長：</span>
+                        <span>林宛儀</span>
+                    </div>
+                    <div class="flex border-b border-stone-200 pb-4 justify-center">
+                        <span class="font-bold w-48 text-amber-800">組員：</span>
+                        <span>蔡岱倫</span>
+                    </div>
+                    <div class="flex pb-4 justify-center">
+                        <span class="font-bold w-48 text-amber-800">組員：</span>
+                        <span>黃端玲</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第 20 頁：資料來源 -->
+        <section class="slide-page bg-[#4a3728]">
+            <div class="card border-none bg-white/95 text-center flex flex-col justify-center items-center">
+                <div class="text-7xl mb-8">📚</div>
+                <h2 class="serif text-6xl font-bold mb-16 text-amber-900 border-b-4 border-amber-200 inline-block pb-6">資料來源</h2>
+                
+                <div class="space-y-10 text-3xl text-stone-700 text-left w-full max-w-4xl bg-[#fdfaf7] p-12 rounded-3xl shadow-inner">
+                    <div class="flex border-b border-stone-200 pb-4 justify-center">
                         <span class="font-bold w-48 text-amber-800">訪談對象：</span>
                         <span>Somida 舒蜜達芳香美學</span>
                     </div>
-                    <div class="flex border-b border-stone-200 pb-4">
+                    <div class="flex pb-4 justify-center">
                         <span class="font-bold w-48 text-amber-800">資料來源：</span>
                         <span>網路搜尋、實地訪談</span>
                     </div>
-                    <div class="flex border-b border-stone-200 pb-4">
-                        <span class="font-bold w-48 text-amber-800">組長：</span>
-                        <span>林宛儀 <span class="text-2xl text-stone-500 ml-4">(訪談)</span></span>
-                    </div>
-                    <div class="flex border-b border-stone-200 pb-4">
-                        <span class="font-bold w-48 text-amber-800">組員：</span>
-                        <span>蔡岱倫 <span class="text-2xl text-stone-500 ml-4">(版面編排)</span></span>
-                    </div>
-                    <div class="flex">
-                        <span class="font-bold w-48 text-amber-800">組員：</span>
-                        <span>黃端玲 <span class="text-2xl text-stone-500 ml-4">(紀錄)</span></span>
-                    </div>
                 </div>
 
-                <p class="mt-16 text-xl text-stone-400">Copyright © 2024 Somida SPA</p>
+                <p class="mt-20 text-2xl text-stone-400 font-bold">Copyright © 2024 Somida SPA</p>
             </div>
         </section>
 
@@ -416,42 +548,73 @@
         const slider = document.getElementById('slider');
         const indicator = document.getElementById('page-indicator');
 
+        // 初始化頁碼
+        indicator.innerText = `1 / ${totalSlides}`;
+
         function updateSlide() {
-            // 計算水平位移 (100vw = 1個螢幕寬度)
             slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
             indicator.innerText = `${currentSlide + 1} / ${totalSlides}`;
         }
 
-        // 監聽鍵盤左右/上下方向鍵
+        function advance() {
+            const currentSlideEl = slides[currentSlide];
+            // 尋找目前頁面是否有「尚未顯示」的解答
+            const unrevealedAnswer = currentSlideEl.querySelector('.reveal-answer:not(.revealed)');
+
+            // 如果有解答還沒亮起，就先讓解答亮起，不要切換到下一頁
+            if (unrevealedAnswer) {
+                unrevealedAnswer.classList.add('revealed');
+                unrevealedAnswer.classList.remove('border-stone-100');
+                unrevealedAnswer.classList.add('border-2', 'border-teal-400', 'bg-teal-50', 'font-bold', 'text-teal-900');
+                
+                const checkMark = unrevealedAnswer.querySelector('.check-mark');
+                if(checkMark) checkMark.classList.remove('opacity-0');
+            } 
+            // 如果解答已經亮起（或該頁根本沒有隱藏解答），才切換到下一頁
+            else if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function goBack() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+                
+                // 返回上一頁時，可選擇性把後方投影片的答案重置回隱藏狀態（方便重新 demo）
+                for(let i = currentSlide + 1; i < totalSlides; i++) {
+                    const reveals = slides[i].querySelectorAll('.reveal-answer.revealed');
+                    reveals.forEach(r => {
+                        r.classList.remove('revealed', 'border-2', 'border-teal-400', 'bg-teal-50', 'font-bold', 'text-teal-900');
+                        r.classList.add('border-stone-100');
+                        const checkMark = r.querySelector('.check-mark');
+                        if(checkMark) checkMark.classList.add('opacity-0');
+                    });
+                }
+            }
+        }
+
+        // 綁定鍵盤事件
         document.addEventListener('keydown', function(event) {
             if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-                if (currentSlide < totalSlides - 1) {
-                    currentSlide++;
-                    updateSlide();
-                }
+                advance();
             } 
             else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    updateSlide();
-                }
+                goBack();
             }
         });
 
-        // 支援滑鼠點擊畫面左右側來翻頁
+        // 綁定滑鼠點擊事件
         document.addEventListener('click', function(event) {
             const clickX = event.clientX;
             const windowWidth = window.innerWidth;
             
-            // 點擊右半邊 -> 下一頁
-            if (clickX > windowWidth / 2 && currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateSlide();
+            if (clickX > windowWidth / 2) {
+                advance();
             } 
-            // 點擊左半邊 -> 上一頁
-            else if (clickX <= windowWidth / 2 && currentSlide > 0) {
-                currentSlide--;
-                updateSlide();
+            else if (clickX <= windowWidth / 2) {
+                goBack();
             }
         });
     </script>
