@@ -661,29 +661,40 @@
             </div>
         </section>
 
-        <!-- 第 22 頁：資料來源 + 小組合照 -->
+        <!-- 第 22 頁：資料來源 + 小組合照 (左右版面優化) -->
         <section class="slide-page bg-[#4a3728]">
-            <div class="card border-none bg-white/95 text-center flex flex-col justify-center items-center">
-                <div class="text-8xl mb-6">📚</div>
-                <h2 class="serif text-7xl font-bold mb-10 text-amber-900 border-b-4 border-amber-200 inline-block pb-4">資料來源</h2>
-                
-                <div class="space-y-8 text-4xl text-stone-700 text-left w-full max-w-4xl bg-[#fdfaf7] p-10 rounded-3xl shadow-inner mb-8">
-                    <div class="flex border-b border-stone-200 pb-4 justify-center">
-                        <span class="font-bold w-48 text-amber-800">訪談對象：</span>
-                        <span>Somida 舒蜜達芳香美學</span>
-                    </div>
-                    <div class="flex pb-4 justify-center">
-                        <span class="font-bold w-48 text-amber-800">資料來源：</span>
-                        <span>網路搜尋、實地訪談</span>
-                    </div>
-                </div>
+            <div class="card border-none bg-white/95 flex flex-col justify-center items-center p-12">
+                <!-- 左右兩欄佈局 -->
+                <div class="flex flex-col md:flex-row w-full h-full gap-12 items-center justify-center max-w-7xl">
 
-                <!-- 加入 four.png 圖片展示區 -->
-                <div class="flex justify-center flex-1 min-h-0 w-full max-w-2xl">
-                    <img src="four.png" alt="小組紀錄合影" class="max-h-[30vh] w-auto object-contain drop-shadow-xl rounded-2xl border-4 border-white">
-                </div>
+                    <!-- 左側：文字資訊 -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-left pl-0 md:pl-10">
+                        <div class="text-8xl mb-6">📚</div>
+                        <h2 class="serif text-7xl font-bold mb-10 text-amber-900 border-b-4 border-amber-200 inline-block pb-4">資料來源</h2>
 
-                <p class="mt-8 text-3xl text-stone-400 font-bold">Copyright © 2024 Somida SPA</p>
+                        <div class="space-y-8 text-4xl text-stone-700 w-full bg-[#fdfaf7] p-10 rounded-3xl shadow-inner border border-stone-200">
+                            <div class="flex border-b border-stone-200 pb-4">
+                                <span class="font-bold w-48 text-amber-800">訪談對象：</span>
+                                <span>Somida 舒蜜達芳香美學</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-bold w-48 text-amber-800">資料來源：</span>
+                                <span>網路搜尋、實地訪談</span>
+                            </div>
+                        </div>
+                        <p class="mt-16 text-3xl text-stone-400 font-bold">Copyright © 2024 Somida SPA</p>
+                    </div>
+
+                    <!-- 右側：大張合照 (拍立得風格) -->
+                    <div class="w-full md:w-1/2 flex flex-col items-center justify-center h-full">
+                        <div class="bg-white p-6 pb-12 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300">
+                            <!-- 放大了圖片的最大高度限制，並加入點擊放大功能 -->
+                            <img src="four.png" alt="小組紀錄合影" class="w-full max-h-[60vh] object-contain border border-stone-200 rounded cursor-zoom-in" onclick="openLightbox(this.src)">
+                            <p class="text-center mt-6 text-4xl font-bold text-stone-600 serif">📸 訪談幕後花絮合影</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
