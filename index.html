@@ -729,27 +729,27 @@
             </div>
         </section>
 
-        <!-- 第 22 頁：資料來源 + 小組合照 (左右版面優化) -->
+        <!-- 第 23 頁：資料來源 + 小組合照 (左右版面優化，已修正切邊問題) -->
         <section class="slide-page bg-[#4a3728]">
-            <div class="card border-none bg-white/95 flex flex-col justify-center items-center p-12">
+            <div class="card border-none bg-white/95 flex flex-col justify-center items-center py-8 px-12">
                 <!-- 左右兩欄佈局 -->
-                <div class="flex flex-col md:flex-row w-full h-full gap-12 items-center justify-center max-w-7xl">
+                <div class="flex flex-col md:flex-row w-full h-full gap-10 items-center justify-center max-w-7xl">
 
                     <!-- 左側：文字資訊 -->
                     <div class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-left pl-0 md:pl-10">
-                        <div class="text-8xl mb-6">📚</div>
-                        <h2 class="serif text-7xl font-bold mb-10 text-amber-900 border-b-4 border-amber-200 inline-block pb-4">資料來源</h2>
+                        <div class="text-6xl md:text-7xl mb-4">📚</div>
+                        <h2 class="serif text-6xl md:text-7xl font-bold mb-6 text-amber-900 border-b-4 border-amber-200 inline-block pb-4">資料來源</h2>
 
-                        <div class="space-y-8 text-4xl text-stone-700 w-full bg-[#fdfaf7] p-10 rounded-3xl shadow-inner border border-stone-200">
+                        <div class="space-y-6 text-3xl md:text-4xl text-stone-700 w-full bg-[#fdfaf7] p-8 rounded-3xl shadow-inner border border-stone-200">
                             <div class="flex border-b border-stone-200 pb-4 items-start">
                                 <span class="font-bold w-48 shrink-0 text-amber-800">訪談對象：</span>
                                 <span>Somida 舒蜜達芳香美學</span>
                             </div>
                             <div class="flex border-b border-stone-200 pb-4 items-start">
                                 <span class="font-bold w-48 shrink-0 text-amber-800">參考網頁：</span>
-                                <span class="text-3xl leading-relaxed break-all">
+                                <span class="text-2xl md:text-3xl leading-relaxed break-all">
                                     MACUS Business Center<br>
-                                    <a href="https://macusbc.com/%E6%88%90%E7%AB%8B%E5%B7%A5%E4%BD%9C%E5%AE%A4/" target="_blank" class="text-2xl text-amber-600 hover:text-amber-800 transition-colors">https://macusbc.com/成立工作室/</a>
+                                    <a href="https://macusbc.com/%E6%88%90%E7%AB%8B%E5%B7%A5%E4%BD%9C%E5%AE%A4/" target="_blank" class="text-xl md:text-2xl text-amber-600 hover:text-amber-800 transition-colors">https://macusbc.com/成立工作室/</a>
                                 </span>
                             </div>
                             <div class="flex items-start">
@@ -757,15 +757,15 @@
                                 <span>網路搜尋、實地訪談</span>
                             </div>
                         </div>
-                        <p class="mt-16 text-3xl text-stone-400 font-bold">Copyright © 2024 Somida SPA</p>
+                        <p class="mt-6 text-2xl md:text-3xl text-stone-400 font-bold">Copyright © 2024 Somida SPA</p>
                     </div>
 
                     <!-- 右側：大張合照 (拍立得風格) -->
                     <div class="w-full md:w-1/2 flex flex-col items-center justify-center h-full">
-                        <div class="bg-white p-6 pb-12 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300">
-                            <!-- 放大了圖片的最大高度限制，並加入點擊放大功能 -->
-                            <img src="four.png" alt="小組紀錄合影" class="w-full max-h-[60vh] object-contain border border-stone-200 rounded cursor-zoom-in" onclick="openLightbox(this.src)">
-                            <p class="text-center mt-6 text-4xl font-bold text-stone-600 serif">📸 訪談幕後花絮合影</p>
+                        <div class="bg-white p-5 pb-8 md:p-6 md:pb-10 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300">
+                            <!-- 縮小了圖片的最大高度限制，避免超出卡片 -->
+                            <img src="four.png" alt="小組紀錄合影" class="w-full max-h-[45vh] md:max-h-[50vh] object-contain border border-stone-200 rounded cursor-zoom-in" onclick="openLightbox(this.src)">
+                            <p class="text-center mt-4 md:mt-6 text-3xl md:text-4xl font-bold text-stone-600 serif">📸 訪談幕後花絮合影</p>
                         </div>
                     </div>
 
