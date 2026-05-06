@@ -93,9 +93,94 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             z-index: 50;
         }
+
+        .print-btn {
+            position: fixed;
+            top: 2rem;
+            right: 2.5rem;
+            background: #d97706;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+            cursor: pointer;
+            z-index: 50;
+            transition: all 0.3s;
+            font-family: 'LXGW WenKai TC', sans-serif;
+            border: 2px solid #b45309;
+        }
+        .print-btn:hover {
+            background: #b45309;
+            transform: scale(1.05);
+        }
+
+        /* === 專屬列印與匯出 PDF 設定 === */
+        @media print {
+            @page {
+                size: landscape; /* 強制橫向列印 */
+                margin: 0; /* 移除預設白邊 */
+            }
+            body, html {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+            }
+            /* 解除 JS 的縮放，並將版面改為垂直排列以支援多頁 PDF */
+            .slider-container {
+                display: block !important;
+                transform: none !important;
+                width: 100% !important;
+                height: auto !important;
+                overflow: visible !important;
+            }
+            /* 強制每頁斷頁 */
+            .slide-page {
+                height: 100vh !important;
+                width: 100vw !important;
+                page-break-after: always !important;
+                break-inside: avoid !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 3vh 3vw !important; /* PDF 的留白 */
+            }
+            .card {
+                transform: none !important;
+                width: 100% !important;
+                max-width: 1500px !important; /* 適應紙張寬度 */
+                height: 94vh !important;
+                margin: 0 auto !important;
+                page-break-inside: avoid !important;
+                box-shadow: none !important; /* 印表機不需要外陰影 */
+            }
+            /* 隱藏網頁操作介面 */
+            #page-indicator, .print-btn, #lightbox {
+                display: none !important;
+            }
+            /* 強制列印背景顏色與圖片 (Chrome/Safari/Edge) */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            /* 在 PDF 模式下，強迫 Q&A 顯示正確答案 */
+            .reveal-answer {
+                border: 2px solid #2dd4bf !important;
+                background-color: #f0fdfa !important;
+                font-weight: 700 !important;
+                color: #134e4a !important;
+            }
+            .check-mark {
+                opacity: 1 !important;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- 下載 PDF 按鈕 -->
+    <button class="print-btn" onclick="window.print()">📥 下載 PDF</button>
 
     <div id="page-indicator"></div>
 
@@ -112,7 +197,7 @@
                 <div class="flex flex-row justify-center gap-8 mb-10 w-full max-w-6xl">
                     <div class="bg-blue-50 py-5 px-8 rounded-3xl shadow-sm border border-blue-100 flex flex-col items-center flex-1">
                         <span class="text-4xl font-bold text-blue-800 mb-3">林宛儀</span>
-                        <span class="text-2xl text-blue-600 font-medium">背景 / 組織  / 行銷</span>
+                        <span class="text-2xl text-blue-600 font-medium">背景 / 組織 / 行銷</span>
                     </div>
                     <div class="bg-purple-50 py-5 px-8 rounded-3xl shadow-sm border border-purple-100 flex flex-col items-center flex-1">
                         <span class="text-4xl font-bold text-purple-800 mb-3">黃端玲</span>
@@ -191,7 +276,7 @@
                 <h2 class="serif text-6xl font-bold mb-10 flex items-center"><span class="text-7xl mr-6">🌱</span> 1. 生平背景</h2>
                 <div class="card-content space-y-12 text-4xl leading-relaxed pr-48">
                     <div class="bg-amber-50 p-8 rounded-3xl shadow-sm border border-amber-100">
-                        <p><strong class="text-amber-800 text-5xl block mb-4">轉折的起點：</strong>原本就讀傳播科系，畢業後進入壽險業，但因感受到保險業過強的目的性與業績壓力，意識到自己嚮往純粹的服務。因緣際會下追隨學姐腳步進入美容產業，深耕了八年。</p>
+                        <p><strong class="text-amber-800 text-5xl block mb-4">轉折的起點：</strong>原本就讀傳播科系，畢業後進入壽險業，但因感受到保險業過強的目的性與業績壓力，意識到自己嚮往純粹的服務。因緣際會下追隨學姊腳步進入美容產業，深耕了八年。</p>
                     </div>
                     <div class="bg-amber-50 p-8 rounded-3xl shadow-sm border border-amber-100">
                         <p><strong class="text-amber-800 text-5xl block mb-4">歸鄉的契機：</strong>在大公司體會到忽視員工權益的辛酸。110 年家人生病決定回鄉，遇上 COVID-19 疫情。這份「被迫停下」的契機，反而成了深耕台南的養分，因禍得福。</p>
@@ -650,7 +735,7 @@
                     <div class="bg-white p-12 rounded-3xl shadow-sm border border-teal-100 text-4xl leading-relaxed text-stone-700 space-y-10">
                         <p>聽完舒蜜達的故事，我們不難發現，一個好的芳療師與一位好的老師，其實有很多共通之處。</p>
                         <p>芳療師在乎的是：<strong class="text-teal-700">讓每一位客人在沒有壓力的環境中放鬆，並感受到被尊重。</strong></p>
-                        <p>老師在乎的，不也應該是同樣的事嗎？</p>
+                        <p>老師在乎的，也應該是同樣的事</p>
                         <div class="bg-teal-50 p-8 rounded-2xl border border-teal-200 mt-4">
                             <p class="text-teal-800 font-bold text-4xl">以下兩題，邀請大家一起思考——</p>
                             <p class="text-teal-700 text-4xl mt-4">舒蜜達的服務理念，可以如何應用在教育現場？</p>
@@ -888,7 +973,7 @@
         });
 
         document.addEventListener('click', function(event) {
-            if (event.target.closest('#lightbox') || event.target.closest('.cursor-zoom-in')) return;
+            if (event.target.closest('#lightbox') || event.target.closest('.print-btn') || event.target.closest('.cursor-zoom-in')) return;
             const clickX = event.clientX;
             const windowWidth = window.innerWidth;
             if (clickX > windowWidth / 2) advance();
