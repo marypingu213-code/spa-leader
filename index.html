@@ -123,34 +123,35 @@
                 margin: 0; /* 移除預設白邊 */
             }
             body, html {
-                overflow: visible !important;
                 height: auto !important;
                 width: 100% !important;
             }
-            /* 解除 JS 的縮放，並將版面改為垂直排列以支援多頁 PDF */
+            /* 解除 JS 的左右排版，改為垂直排列以支援多頁 PDF */
             .slider-container {
                 display: block !important;
                 transform: none !important;
                 width: 100% !important;
                 height: auto !important;
-                overflow: visible !important;
             }
             /* 強制每頁斷頁 */
             .slide-page {
                 height: 100vh !important;
                 width: 100vw !important;
                 page-break-after: always !important;
+                break-after: page !important;
                 break-inside: avoid !important;
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-                padding: 3vh 3vw !important; /* PDF 的留白 */
+                padding: 0 !important;
+                margin: 0 !important;
             }
             .card {
-                transform: none !important;
-                width: 100% !important;
-                max-width: 1500px !important; /* 適應紙張寬度 */
-                height: 94vh !important;
+                /* 覆蓋 JS 自動生成的 scale()，強制固定縮放比例放入 A4 橫向 */
+                transform: scale(0.68) !important;
+                transform-origin: center center !important;
+                width: 1600px !important;
+                height: 900px !important;
                 margin: 0 auto !important;
                 page-break-inside: avoid !important;
                 box-shadow: none !important; /* 印表機不需要外陰影 */
